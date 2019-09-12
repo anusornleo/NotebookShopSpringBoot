@@ -25,6 +25,8 @@ and run Database.
 
 ## My Springboot web can do?
 
+**Home Page**
+
 ```sh
 localhost:8080
 ```
@@ -32,6 +34,9 @@ localhost:8080
 result on screen : Welcome from controller
 
 ______
+
+**Show emply notebook**
+
 **GET** method
 ```sh
 localhost:8080/notebook
@@ -40,6 +45,9 @@ localhost:8080/notebook
 result on screen : []
 
 _______
+
+**Add new Notebook**
+
 **POST** method
 ```sh
 localhost:8080/add
@@ -55,6 +63,8 @@ localhost:8080/add
 
 result on screen : notebook id 0 Saved
 _______
+**Show all Notebook**
+
 **GET** method
 ```sh
 localhost:8080/notebook
@@ -68,7 +78,55 @@ result on screen : array of notebook
   }
 ```    
 _______
+**Update exist Notebook**
 
+**UPDATE** method
+```sh
+localhost:8080/notebook/update/0
+```
+```
+  {
+	  "brand":"HP",
+	  "model":"Omen-15",
+	  "price":39900.00
+  }
+```
+result on screen : Update Done!
+if id not exist : id not found
+_____
 
+**Show all Notebook**
 
+**GET** method
+```sh
+localhost:8080/notebook
+```
+result on screen : array of updated notebook
+```
+  {
+	  "brand":"HP",
+	  "model":"Omen-15",
+	  "price":39900.00
+  }
+```    
+_______
 
+**Delete exist Notebook**
+
+**Delete** method
+
+```sh
+localhost:8080/notebook/delete/0
+```
+
+result on screen : Notebook 0 has been Delete
+_____
+
+**Delete All Notebook**
+
+**Delete** method
+
+```sh
+localhost:8080/notebook/delete/0
+```
+result on screen : Notebook catalog has been reset
